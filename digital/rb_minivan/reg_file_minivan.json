@@ -1,0 +1,95 @@
+// Register database generic build system
+{
+  "registers": [
+    {
+      "symbol"      : "sys_cfg.enable_stuf",
+      "address"     : "0x00",
+      "pos"         : "0",
+      "size"        : "1",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : "Enable stuf"
+    },
+    {
+      "symbol"      : "sys_cfg.enable_other",
+      "address"     : "0x00",
+      "pos"         : "1",
+      "size"        : "1",
+      "reset"       : "1",
+      "readonly"    : "0",
+      "description" : "Enable other stuf"
+    },
+    {
+      "symbol"      : "sys_cfg.debug_out",
+      "address"     : "0x01",
+      "pos"         : "0",
+      "size"        : "6",
+      "reset"       : "21",
+      "readonly"    : "0",
+      "description" : "Monitor internal flag"
+    },
+    {
+      "symbol"      : "sys_cfg.debug_led",
+      "address"     : "0x02",
+      "pos"         : "0",
+      "size"        : "6",
+      "reset"       : "81",
+      "readonly"    : "0",
+      "description" : "Debug led signals"
+    },
+    {
+      "symbol"      : "sys_cfg.spare_0",
+      "address"     : "0x03",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "17",
+      "readonly"    : "0",
+      "description" : "Spare_reg0"
+    },
+    {
+      "symbol"      : "sys_cfg.spare_1",
+      "address"     : "0x04",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "34",
+      "readonly"    : "0",
+      "description" : "Spare_reg1"
+    },
+    {
+      "symbol"      : "sys_cfg.spare_2",
+      "address"     : "0x05",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "51",
+      "readonly"    : "0",
+      "description" : "Spare_reg2"
+    },
+    {
+      "symbol"      : "pwm_cfg.pwm_red",
+      "address"     : "0x12",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "133",
+      "readonly"    : "0",
+      "description" : "Counter value for pwm"
+    },
+    {
+      "symbol"      : "pwm_cfg.pwm_green",
+      "address"     : "0x13",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "133",
+      "readonly"    : "0",
+      "description" : "Counter value for pwm"
+    },
+    {
+      "symbol"      : "pwm_cfg.pwm_blue",
+      "address"     : "0x14",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "133",
+      "readonly"    : "0",
+      "description" : "Counter value for pwm"
+    }
+  ]
+}
