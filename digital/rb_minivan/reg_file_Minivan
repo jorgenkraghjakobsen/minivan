@@ -1,0 +1,10 @@
+// Register database generic build system
+sys_cfg.enable_stuf 0x00 0 1 0 Enable stuf
+sys_cfg.enable_other 0x00 1 1 1 Enable other stuf
+sys_cfg.monitor_flag 0x00 2 5 0 
+sys_cfg.pwm_duty_green 0x06 0 8 64 
+sys_cfg.pwm_duty_blue 0x07 0 8 64 
+sys_cfg.pwm_duty_red 0x05 0 8 64 
+sys_cfg.debug 0x04 0 8 0 
+sys_cfg.nytreg 0x03 0 8 0 
+sys_cfg.nytreg 0x02 0 8 0 

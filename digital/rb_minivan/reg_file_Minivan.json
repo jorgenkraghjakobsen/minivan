@@ -1,0 +1,85 @@
+{
+  "registers": [
+    {
+      "symbol"      : "sys_cfg.enable_stuf",
+      "address"     : "0x00",
+      "pos"         : "0",
+      "size"        : "1",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : "Enable stuf"
+    },
+    {
+      "symbol"      : "sys_cfg.enable_other",
+      "address"     : "0x00",
+      "pos"         : "1",
+      "size"        : "1",
+      "reset"       : "1",
+      "readonly"    : "0",
+      "description" : "Enable other stuf"
+    },
+    {
+      "symbol"      : "sys_cfg.monitor_flag",
+      "address"     : "0x00",
+      "pos"         : "2",
+      "size"        : "5",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.pwm_duty_green",
+      "address"     : "0x06",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "64",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.pwm_duty_blue",
+      "address"     : "0x07",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "64",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.pwm_duty_red",
+      "address"     : "0x05",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "64",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.debug",
+      "address"     : "0x04",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.nytreg",
+      "address"     : "0x03",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : ""
+    },
+    {
+      "symbol"      : "sys_cfg.nytreg",
+      "address"     : "0x02",
+      "pos"         : "0",
+      "size"        : "8",
+      "reset"       : "0",
+      "readonly"    : "0",
+      "description" : ""
+    },
+  ]
+}
