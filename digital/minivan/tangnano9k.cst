@@ -1,0 +1,49 @@
+IO_LOC  "data_delayed_out" 56;
+
+IO_LOC  "data_out" 55;
+
+IO_LOC  "data_in" 54;
+
+IO_LOC  "pwm_blue_out" 27;
+
+IO_LOC  "ena" 69;
+IO_PORT "ena" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "pwm_green_out" 63;
+IO_PORT "pwm_green_out" IO_TYPE=LVCMOS33;
+
+IO_LOC  "pwm_red_out" 35;
+IO_PORT "pwm_red_out" IO_TYPE=LVCMOS33;
+
+IO_LOC  "i2c_scl" 25;
+IO_PORT "i2c_scl" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "i2c_sda" 26;
+IO_PORT "i2c_sda" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "debug_out[0]" 10;
+IO_PORT "debug_out[0]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_out[1]" 11;
+IO_PORT "debug_out[1]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_out[2]" 13;
+IO_PORT "debug_out[2]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_out[3]" 14;
+IO_PORT "debug_out[3]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_out[4]" 15;
+IO_PORT "debug_out[4]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_out[5]" 16;
+IO_PORT "debug_out[5]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "resetb" 3;
+IO_PORT "resetb" IO_TYPE=LVCMOS18;
+
+IO_LOC  "debug_in" 4;
+IO_PORT "debug_in" IO_TYPE=LVCMOS18;
+
+IO_LOC  "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;

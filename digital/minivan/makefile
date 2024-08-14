@@ -73,7 +73,7 @@ $(OBJ)/$(PRO).json: conv2v $(OBJ) $(SRC)
 $(OBJ)/$(PRO)_pnr.json: $(OBJ)/$(PRO).json
 	cd $(OBJ) ;\
 	nextpnr-himbaechel --json $(PRO).json --write $(PRO)_pnr.json \
-	--device ${DEVICE} --vopt family=${FAMILY} --vopt cst=$(WS)/src/$(BOARD_DIR).cst
+	--device ${DEVICE} --vopt family=${FAMILY} --vopt cst=$(WS)/digital/$(BOARD_DIR).cst
 
 
 $(OBJ)/$(PRO).fs: $(OBJ)/$(PRO)_pnr.json

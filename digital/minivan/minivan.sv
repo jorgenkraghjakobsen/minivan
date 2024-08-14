@@ -16,8 +16,8 @@ module minivan
     //---I2C-----------         //! Device interface for register read/write  
     input   i2c_scl,            //! I2C clk input         
     
-    input   i2c_sdai,           //! I2C data line   
-    output  i2c_sdao,           //! bidirectional io handled at higher level
+    inout   i2c_sda,           //! I2C data line   
+    //output  i2c_sdao,           //! bidirectional io handled at higher level
     
     //---Your interface here    
     input   data_in,            //! Generic input pin
@@ -146,7 +146,7 @@ pwm pwm_red (
 pwm pwm_green (
     .clock_in(clk),
     .reset(!resetb),
-    .duty_cycle(sys_cfg.pwm_green),  // 0x80 -> 50% 
+    .duty_cycle(pwm_cfg.pwm_green),  // 0x80 -> 50% 
     .pwm_out(pwm_green_out)
 ); 
 
