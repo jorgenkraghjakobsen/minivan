@@ -67,21 +67,27 @@ module minivan (
 	assign debug_out = {data_fifo[15], sys_cfg[28:24]};
 	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:95:1
 	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:96:1
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:101:1
-	wire [7:0] rb_address;
 	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:102:1
-	wire [7:0] rb_data_write_to_reg;
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:103:1
-	wire [7:0] rb_data_read_from_reg;
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:104:1
-	wire rb_reg_en;
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:105:1
-	wire rb_write_en;
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:106:1
-	wire [1:0] rb_streamSt_mon;
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:108:1
 	wire i2c_sdai;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:103:1
 	wire i2c_sdao;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:104:1
+	assign i2c_sdai = i2c_sda;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:105:1
+	assign i2c_sda = (i2c_sdao == 1'b0 ? 1'b0 : 1'bz);
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:108:1
+	wire [7:0] rb_address;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:109:1
+	wire [7:0] rb_data_write_to_reg;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:110:1
+	wire [7:0] rb_data_read_from_reg;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:111:1
+	wire rb_reg_en;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:112:1
+	wire rb_write_en;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:113:1
+	wire [1:0] rb_streamSt_mon;
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:115:1
 	i2c_if i2c_inst(
 		.clk(clk),
 		.resetb(resetb),
@@ -95,7 +101,7 @@ module minivan (
 		.write_en(rb_write_en),
 		.streamSt_mon(rb_streamSt_mon)
 	);
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:124:1
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:131:1
 	rb_minivan rb_minivan_inst(
 		.clk(clk),
 		.resetb(resetb),
@@ -106,21 +112,21 @@ module minivan (
 		.sys_cfg(sys_cfg),
 		.pwm_cfg(pwm_cfg)
 	);
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:139:1
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:146:1
 	pwm pwm_red(
 		.clock_in(clk),
 		.reset(!resetb),
 		.duty_cycle(pwm_cfg[23-:8]),
 		.pwm_out(pwm_red_out)
 	);
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:146:1
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:153:1
 	pwm pwm_green(
 		.clock_in(clk),
 		.reset(!resetb),
 		.duty_cycle(pwm_cfg[15-:8]),
 		.pwm_out(pwm_green_out)
 	);
-	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:153:1
+	// Trace: /home/jakobsen/work/asic/workspace/minivan/digital/minivan/minivan.sv:160:1
 	pwm pwm_blue(
 		.clock_in(clk),
 		.reset(!resetb),

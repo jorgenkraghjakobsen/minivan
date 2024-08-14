@@ -98,6 +98,13 @@ rb_pwm_cfg_wire_t pwm_cfg;
 //--------------------------------------------------------------------------------------------------------
 // I2C  
 //-------------------------------------------------------------------------------------------------------- 
+
+wire i2c_sdai; 
+wire i2c_sdao;
+assign i2c_sdai = i2c_sda;
+assign i2c_sda = (i2c_sdao == 1'b0)? 1'b0 : 1'bz;  
+
+
 wire [7:0] rb_address;              // Default 8 bit register space 
 wire [7:0] rb_data_write_to_reg;
 wire [7:0] rb_data_read_from_reg;

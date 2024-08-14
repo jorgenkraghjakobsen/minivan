@@ -63,9 +63,9 @@ func main() {
 		{7, "spare_2", 				"sys_cfg", 5, 8, 0, 0x33, 	false, "Spare_reg2", "Debug led signals"},
 	}
 	pwm_cfg := []Symbol{
-		{0, "pwm_red",			 	"sys_cfg", 2, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
-		{1, "pwm_green",			"sys_cfg", 3, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
-		{2, "pwm_blue",			 	"sys_cfg", 4, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
+		{0, "pwm_red",			 	"pwm_cfg", 2, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
+		{1, "pwm_green",			"pwm_cfg", 3, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
+		{2, "pwm_blue",			 	"pwm_cfg", 4, 8, 0, 0x85, 	false, "Counter value for pwm", "Long"}, 
 	}
 
     sec := []Section{

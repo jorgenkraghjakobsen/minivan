@@ -1,8 +1,8 @@
 module pwm(
-    input clock_in,         // Input clock on FPGA
-    input reset,            // Reset signal
-    input [7:0] duty_cycle, // Duty cycle of the output clock
-    output pwm_out          // pwm_output signal  
+    input clock_in,         //! Input clock on FPGA
+    input reset,            //! Reset signal
+    input [7:0] duty_cycle, //! Duty cycle of the output clock
+    output pwm_out          //! pwm_output signal  
 );
 
 // Divide clok by 256
@@ -11,9 +11,9 @@ module pwm(
 // so 27 MHz / 256 = 105.46875 kHz
    
  
-reg [7:0] counter;         
+reg [7:0] counter;         //! Counter to divide the clock
 
-reg pwm_r;                 
+reg pwm_r;                 //! PWM signal
 
 always @(posedge clock_in) begin
     if (reset) begin
